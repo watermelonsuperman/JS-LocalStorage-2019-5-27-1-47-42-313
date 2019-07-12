@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+      <meta charset="UTF-8">
+  </head>
+  <body>
+   <script>
+window.onload = function(){
+ var btn = document.getElementById("btn");
+ var num = document.getElementById("num");
+ if(localStorage.getItem("k")!="NaN"){
+	 var i  = parseInt(localStorage.getItem("k"));
+ }else{
+	var i = 0;
+ }
+num.innerHTML = i;
+ btn.onclick = function(){
+  i += 1;   
+  num.innerHTML = i;
+  localStorage.setItem("k", i);
+ } 
+}
+</script>
+<button id="btn">点击按钮加一</button>
+<h1 id="num">0</h1>
+  </body>
+  </html>
